@@ -140,10 +140,10 @@ class PlacePickerScreenState extends State<PlacePickerScreen> {
     _searchPlace() async {
       var location;
       if (myLocation != null) {
-        location = Location(myLocation.latitude, myLocation.longitude);
+        location = Location(lat: myLocation.latitude, lng: myLocation.longitude);
       } else {
         location =
-            Location(initialPosition.latitude, initialPosition.longitude);
+            Location(lat: initialPosition.latitude, lng: initialPosition.longitude);
       }
       Prediction p = await PlacesAutocomplete.show(
         context: context,

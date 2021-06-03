@@ -364,7 +364,7 @@ class _AreaPickerScreenState extends State<AreaPickerScreen> {
           mode: Mode.fullscreen,
           language: placeAutoCompleteLanguage,
           location: myLocation != null
-              ? Location(myLocation.latitude, myLocation.longitude)
+              ? Location(lat: myLocation.latitude, lng: myLocation.longitude)
               : null);
 
       if (p != null) {
@@ -547,7 +547,7 @@ class _AreaPickerScreenState extends State<AreaPickerScreen> {
             )
           ],
         ),
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
       ),
       onWillPop: _onBackPressed,
     );
